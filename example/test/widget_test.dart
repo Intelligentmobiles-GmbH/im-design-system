@@ -6,6 +6,7 @@ void main() {
     await tester.pumpWidget(const DesignBaseExampleApp());
 
     expect(find.text('Design Base'), findsOneWidget);
-    expect(find.text('Premium Plan'), findsOneWidget);
+    expect(find.text('Buttons'), findsOneWidget);
+    expect(find.text('Material Card'), findsOneWidget);
   });
 }
