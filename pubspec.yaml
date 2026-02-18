@@ -17,9 +17,5 @@ dev_dependencies:
   flutter_lints: ^6.0.0
 
 flutter:
-  assets:
-    - assets/fonts/
-  fonts:
-    - family: IBMPlexSans
-      fonts:
-        - asset: assets/fonts/ibm_plex_sans_variable.ttf
+  # For bundled font: add assets/fonts/ and fonts declaration.
+  # Or use Google Fonts: buildTextTheme(fontFamily: 'IBM Plex Sans', base: GoogleFonts.ibmPlexSansTextTheme())

@@ -125,6 +125,40 @@ MaterialApp(
 );
 ```
 
-## 7. Font assets (required for variable fonts)
+## 7. Font assets (IBM Plex Sans)
 
-If using the default IBM Plex Sans font, the package includes it. For custom fonts, add your font files to your app's `assets/fonts/` and declare them in your app's `pubspec.yaml` under `flutter: fonts:`.
+The design system uses IBM Plex Sans by default. Use one of these approaches:
+
+### Option A: Google Fonts (recommended for web)
+
+Add `google_fonts` and load the font at runtime:
+
+```dart
+import 'package:google_fonts/google_fonts.dart';
+
+final baseTheme = GoogleFonts.ibmPlexSansTextTheme();
+final textTheme = buildTextTheme(
+  fontFamily: 'IBM Plex Sans',
+  base: baseTheme,
+  fontSizeScale: 1.1,
+);
+
+MaterialApp(
+  theme: AppTheme.light(textTheme: textTheme),
+  ...
+);
+```
+
+### Option B: Bundled font
+
+Download IBM Plex Sans from [Google Fonts](https://fonts.google.com/specimen/IBM+Plex+Sans) or [IBM/plex](https://github.com/IBM/plex), place in `assets/fonts/`, and declare in your app's `pubspec.yaml`:
+
+```yaml
+flutter:
+  fonts:
+    - family: IBMPlexSans
+      fonts:
+        - asset: assets/fonts/IBMPlexSans-VariableFont_wght.ttf
+```
+
+Then use `buildTextTheme(fontFamily: 'IBMPlexSans')`.

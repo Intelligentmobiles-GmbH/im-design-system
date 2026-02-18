@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:design_base/design_base.dart';
 
 void main() {
+  // Ensure IBM Plex Sans is loaded (fixes font loading on web)
+  GoogleFonts.config.allowRuntimeFetching = true;
   runApp(const DesignBaseExampleApp());
 }
 
@@ -27,7 +30,13 @@ class _DesignBaseExampleAppState extends State<DesignBaseExampleApp> {
     final customDarkPalette = DesignSystemPalette.defaultDark().copyWith(
       primary: const Color(0xFF60A5FA),
     );
-    final textTheme = buildTextTheme(fontSizeScale: 1.1);
+    // Use Google Fonts for IBM Plex Sans (loads at runtime, works on web)
+    final baseTheme = GoogleFonts.ibmPlexSansTextTheme();
+    final textTheme = buildTextTheme(
+      fontFamily: 'IBM Plex Sans',
+      base: baseTheme,
+      fontSizeScale: 1.1,
+    );
 
     return MaterialApp(
       title: 'Design Base Example',
