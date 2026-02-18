@@ -1,0 +1,25 @@
+name: design_base
+description: "A Flutter design system package with color tokens, typography, variable fonts, and ThemeExtension for semantic theming."
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ^3.10.1
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  assets:
+    - assets/fonts/
+  fonts:
+    - family: IBMPlexSans
+      fonts:
+        - asset: assets/fonts/ibm_plex_sans_variable.ttf
