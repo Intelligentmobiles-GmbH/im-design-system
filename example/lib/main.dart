@@ -81,8 +81,8 @@ class ExampleHomeScreen extends StatelessWidget {
               themeMode == ThemeMode.dark
                   ? Icons.light_mode
                   : themeMode == ThemeMode.light
-                      ? Icons.dark_mode
-                      : Icons.brightness_auto,
+                  ? Icons.dark_mode
+                  : Icons.brightness_auto,
               color: context.colors.foreground,
             ),
             onPressed: () {
@@ -90,8 +90,8 @@ class ExampleHomeScreen extends StatelessWidget {
                 themeMode == ThemeMode.light
                     ? ThemeMode.dark
                     : themeMode == ThemeMode.dark
-                        ? ThemeMode.system
-                        : ThemeMode.light,
+                    ? ThemeMode.system
+                    : ThemeMode.light,
               );
             },
           ),
@@ -271,35 +271,17 @@ class _ButtonsSection extends StatelessWidget {
             spacing: 8,
             runSpacing: 8,
             children: [
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text('Elevated'),
-              ),
-              OutlinedButton(
-                onPressed: () {},
-                child: const Text('Outlined'),
-              ),
-              TextButton(
-                onPressed: () {},
-                child: const Text('Text'),
-              ),
-              FilledButton(
-                onPressed: () {},
-                child: const Text('Filled'),
-              ),
-              FilledButton.tonal(
-                onPressed: () {},
-                child: const Text('Tonal'),
-              ),
+              ElevatedButton(onPressed: () {}, child: const Text('Elevated')),
+              OutlinedButton(onPressed: () {}, child: const Text('Outlined')),
+              TextButton(onPressed: () {}, child: const Text('Text')),
+              FilledButton(onPressed: () {}, child: const Text('Filled')),
+              FilledButton.tonal(onPressed: () {}, child: const Text('Tonal')),
             ],
           ),
           const SizedBox(height: 12),
           Row(
             children: [
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.favorite),
-              ),
+              IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
               IconButton.filled(
                 onPressed: () {},
                 icon: const Icon(Icons.favorite),
@@ -499,10 +481,7 @@ class _InputsSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 12),
-          SearchBar(
-            hintText: 'Search',
-            leading: const Icon(Icons.search),
-          ),
+          SearchBar(hintText: 'Search', leading: const Icon(Icons.search)),
         ],
       ),
     );
@@ -611,14 +590,8 @@ class _ChipsSection extends StatelessWidget {
             selected: false,
             onSelected: (_) {},
           ),
-          ActionChip(
-            label: const Text('Action'),
-            onPressed: () {},
-          ),
-          InputChip(
-            label: const Text('Input'),
-            onDeleted: () {},
-          ),
+          ActionChip(label: const Text('Action'), onPressed: () {}),
+          InputChip(label: const Text('Input'), onDeleted: () {}),
           ChoiceChip(
             label: const Text('Choice'),
             selected: false,
@@ -780,10 +753,7 @@ class _DialogsSection extends StatelessWidget {
                     'SnackBar message',
                     style: context.textStyles.bodyMedium,
                   ),
-                  action: SnackBarAction(
-                    label: 'Undo',
-                    onPressed: () {},
-                  ),
+                  action: SnackBarAction(label: 'Undo', onPressed: () {}),
                 ),
               );
             },
@@ -827,9 +797,21 @@ class _NavigationSection extends StatelessWidget {
           const SizedBox(height: 12),
           SegmentedButton<int>(
             segments: const [
-              ButtonSegment(value: 0, label: Text('One'), icon: Icon(Icons.looks_one)),
-              ButtonSegment(value: 1, label: Text('Two'), icon: Icon(Icons.looks_two)),
-              ButtonSegment(value: 2, label: Text('Three'), icon: Icon(Icons.looks_3)),
+              ButtonSegment(
+                value: 0,
+                label: Text('One'),
+                icon: Icon(Icons.looks_one),
+              ),
+              ButtonSegment(
+                value: 1,
+                label: Text('Two'),
+                icon: Icon(Icons.looks_two),
+              ),
+              ButtonSegment(
+                value: 2,
+                label: Text('Three'),
+                icon: Icon(Icons.looks_3),
+              ),
             ],
             selected: const {0},
             onSelectionChanged: (_) {},
@@ -860,9 +842,7 @@ class _OtherSection extends StatelessWidget {
           const Divider(),
           const SizedBox(height: 12),
           DropdownButtonFormField<String>(
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-            ),
+            decoration: const InputDecoration(border: OutlineInputBorder()),
             initialValue: 'one',
             items: const [
               DropdownMenuItem(value: 'one', child: Text('One')),
