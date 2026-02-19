@@ -17,14 +17,18 @@ abstract final class AppTheme {
     final theme = ThemeData(
       brightness: Brightness.light,
       scaffoldBackgroundColor: p.background,
-      colorScheme: ColorScheme.light(
-        primary: p.primary,
-        onPrimary: p.foreground,
-        surface: p.card,
-        onSurface: p.foreground,
-        error: p.destructive,
-        onError: p.foreground,
-      ),
+      colorScheme:
+          ColorScheme.fromSeed(
+            seedColor: p.primary,
+            brightness: Brightness.light,
+          ).copyWith(
+            primary: p.primary,
+            onPrimary: p.foreground,
+            surface: p.card,
+            onSurface: p.foreground,
+            error: p.destructive,
+            onError: p.foreground,
+          ),
       extensions: [p],
       textTheme: textTheme ?? buildTextTheme(fontFamily: fontFamily),
     );
@@ -41,14 +45,18 @@ abstract final class AppTheme {
     final theme = ThemeData(
       brightness: Brightness.dark,
       scaffoldBackgroundColor: p.background,
-      colorScheme: ColorScheme.dark(
-        primary: p.primary,
-        onPrimary: p.foreground,
-        surface: p.card,
-        onSurface: p.foreground,
-        error: p.destructive,
-        onError: p.foreground,
-      ),
+      colorScheme:
+          ColorScheme.fromSeed(
+            seedColor: p.primary,
+            brightness: Brightness.dark,
+          ).copyWith(
+            primary: p.primary,
+            onPrimary: p.foreground,
+            surface: p.card,
+            onSurface: p.foreground,
+            error: p.destructive,
+            onError: p.foreground,
+          ),
       extensions: [p],
       textTheme: textTheme ?? buildTextTheme(fontFamily: fontFamily),
     );
