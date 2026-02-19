@@ -13,27 +13,27 @@ TextTheme buildTextTheme({
 
   final textTheme = TextTheme(
     headlineLarge: TextStyle(
-      fontSize: scale(33),
+      fontSize: scale(20),
       fontFamily: fontFamily,
       fontVariations: const [FontVariation.weight(700)],
     ),
     headlineMedium: TextStyle(
-      fontSize: scale(19),
+      fontSize: scale(16),
       fontFamily: fontFamily,
       fontVariations: const [FontVariation.weight(700)],
     ),
     bodyLarge: TextStyle(
-      fontSize: scale(18),
+      fontSize: scale(14),
       fontFamily: fontFamily,
       fontVariations: const [FontVariation.weight(400)],
     ),
     bodyMedium: TextStyle(
-      fontSize: scale(15),
+      fontSize: scale(12),
       fontFamily: fontFamily,
       fontVariations: const [FontVariation.weight(400)],
     ),
     labelMedium: TextStyle(
-      fontSize: scale(13),
+      fontSize: scale(12),
       fontFamily: fontFamily,
       fontVariations: const [FontVariation.weight(500)],
     ),
