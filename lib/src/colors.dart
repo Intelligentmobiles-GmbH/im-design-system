@@ -40,7 +40,7 @@ class AppColors extends ThemeExtension<AppColors> {
     background: AppPalette.darkBackground,
     foreground: AppPalette.darkForeground,
     card: AppPalette.darkCard,
-    primary: AppPalette.darkPrimaryGlow,
+    primary: AppPalette.darkPrimary,
     destructive: AppPalette.darkDestructive,
     success: AppPalette.darkSuccess,
     warning: AppPalette.darkWarning,
