@@ -1,4 +1,4 @@
-name: design_base
+name: im_design_base
 description: "A Flutter design system package with color tokens, typography, variable fonts, and ThemeExtension for semantic theming."
 version: 0.0.1
 homepage: https://github.com/im-design-system

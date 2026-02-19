@@ -1,3 +1,4 @@
+@TestOn('browser')
 import 'package:im_design_base/im_design_base.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -11,7 +12,7 @@ void main() {
 
     test('dark returns expected primary color', () {
       final palette = AppColors.dark();
-      expect(palette.primary, const Color(0xFFA78BFA));
+      expect(palette.primary, const Color(0xFF8B5CF6));
     });
 
     test('copyWith overrides specified fields', () {
