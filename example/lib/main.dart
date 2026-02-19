@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:design_base/design_base.dart';
+import 'package:im_design_base/im_design_base.dart';
 
 void main() {
   // Ensure IBM Plex Sans is loaded (fixes font loading on web)

@@ -1,6 +1,6 @@
-# Integrating design_base into Your Flutter App
+# Integrating im_design_base into Your Flutter App
 
-This guide explains how to add the design_base package to a new or existing Flutter app and configure themes.
+This guide explains how to add the im_design_base package to a new or existing Flutter app and configure themes.
 
 ## 1. Add the dependency
 
@@ -13,7 +13,7 @@ If the package lives alongside your app:
 dependencies:
   flutter:
     sdk: flutter
-  design_base:
+  im_design_base:
     path: ../design_base
 ```
 
@@ -21,7 +21,7 @@ dependencies:
 
 ```yaml
 dependencies:
-  design_base: ^1.0.0
+  im_design_base: ^1.0.0
 ```
 
 Run `flutter pub get`.
@@ -32,7 +32,7 @@ Import the package and apply the themes:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:design_base/design_base.dart';
+import 'package:im_design_base/im_design_base.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,4 +1,4 @@
-# design_base
+# im_design_base
 
 A Flutter design system package with color tokens, typography, variable fonts, and ThemeExtension for semantic theming.
 
@@ -16,14 +16,14 @@ Add the dependency:
 
 ```yaml
 dependencies:
-  design_base:
-    path: ../design_base  # or design_base: ^1.0.0 when published
+  im_design_base:
+    path: ../design_base  # or im_design_base: ^1.0.0 when published
 ```
 
 ## Usage
 
 ```dart
-import 'package:design_base/design_base.dart';
+import 'package:im_design_base/im_design_base.dart';
 
 MaterialApp(
   theme: AppTheme.light(),

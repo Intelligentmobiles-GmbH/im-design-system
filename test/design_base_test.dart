@@ -1,4 +1,4 @@
-import 'package:design_base/design_base.dart';
+import 'package:im_design_base/im_design_base.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
