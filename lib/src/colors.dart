@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
-
 import 'palette.dart';
 
-/// Semantic colors exposed via [ThemeExtension].
-///
-/// Access in widgets via `context.colors` (requires [ThemeX] extension).
 @immutable
 class AppColors extends ThemeExtension<AppColors> {
+  final Color background;
+  final Color foreground;
+  final Color card;
+  final Color primary;
+  final Color destructive;
+  final Color success;
+  final Color warning;
+  final Color info;
+
   const AppColors({
     required this.background,
     required this.foreground,
@@ -18,26 +23,29 @@ class AppColors extends ThemeExtension<AppColors> {
     required this.info,
   });
 
-  final Color background;
-  final Color foreground;
-  final Color card;
-  final Color primary;
-  final Color destructive;
-  final Color success;
-  final Color warning;
-  final Color info;
+  /// ✅ Light preset
+  factory AppColors.light() => const AppColors(
+    background: AppPalette.background,
+    foreground: AppPalette.foreground,
+    card: AppPalette.card,
+    primary: AppPalette.primary,
+    destructive: AppPalette.destructive,
+    success: AppPalette.success,
+    warning: AppPalette.warning,
+    info: AppPalette.info,
+  );
 
-  /// Creates [AppColors] from a [DesignSystemPalette].
-  factory AppColors.fromPalette(DesignSystemPalette palette) => AppColors(
-        background: palette.background,
-        foreground: palette.foreground,
-        card: palette.card,
-        primary: palette.primary,
-        destructive: palette.destructive,
-        success: palette.success,
-        warning: palette.warning,
-        info: palette.info,
-      );
+  /// ✅ Dark preset
+  factory AppColors.dark() => const AppColors(
+    background: AppPalette.darkBackground,
+    foreground: AppPalette.darkForeground,
+    card: AppPalette.darkCard,
+    primary: AppPalette.darkPrimaryGlow,
+    destructive: AppPalette.darkDestructive,
+    success: AppPalette.darkSuccess,
+    warning: AppPalette.darkWarning,
+    info: AppPalette.darkInfo,
+  );
 
   @override
   AppColors copyWith({

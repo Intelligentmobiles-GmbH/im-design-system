@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  group('DesignSystemPalette', () {
-    test('defaultLight returns expected primary color', () {
-      final palette = DesignSystemPalette.defaultLight();
+  group('AppColors', () {
+    test('light returns expected primary color', () {
+      final palette = AppColors.light();
       expect(palette.primary, const Color(0xFF8B5CF6));
     });
 
-    test('defaultDark returns expected primary color', () {
-      final palette = DesignSystemPalette.defaultDark();
+    test('dark returns expected primary color', () {
+      final palette = AppColors.dark();
       expect(palette.primary, const Color(0xFFA78BFA));
     });
 
     test('copyWith overrides specified fields', () {
-      final palette = DesignSystemPalette.defaultLight();
+      final palette = AppColors.light();
       final custom = palette.copyWith(primary: Colors.blue);
       expect(custom.primary, Colors.blue);
       expect(custom.background, palette.background);

@@ -24,10 +24,10 @@ class _DesignBaseExampleAppState extends State<DesignBaseExampleApp> {
 
   @override
   Widget build(BuildContext context) {
-    final customPalette = DesignSystemPalette.defaultLight().copyWith(
+    final customPalette = AppColors.light().copyWith(
       primary: const Color(0xFF2563EB),
     );
-    final customDarkPalette = DesignSystemPalette.defaultDark().copyWith(
+    final customDarkPalette = AppColors.dark().copyWith(
       primary: const Color(0xFF60A5FA),
     );
     // Use Google Fonts for IBM Plex Sans (loads at runtime, works on web)

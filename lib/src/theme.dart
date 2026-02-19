@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'colors.dart';
-import 'palette.dart';
 import 'typography.dart';
 
 /// Factory for creating [ThemeData] with the design system.
@@ -10,15 +9,23 @@ abstract final class AppTheme {
 
   /// Creates a light [ThemeData] with the design system.
   static ThemeData light({
-    DesignSystemPalette? palette,
+    AppColors? palette,
     TextTheme? textTheme,
     String fontFamily = 'IBMPlexSans',
   }) {
-    final p = palette ?? DesignSystemPalette.defaultLight();
+    final p = palette ?? AppColors.light();
     final theme = ThemeData(
       brightness: Brightness.light,
       scaffoldBackgroundColor: p.background,
-      extensions: [AppColors.fromPalette(p)],
+      colorScheme: ColorScheme.light(
+        primary: p.primary,
+        onPrimary: p.foreground,
+        surface: p.card,
+        onSurface: p.foreground,
+        error: p.destructive,
+        onError: p.foreground,
+      ),
+      extensions: [p],
       textTheme: textTheme ?? buildTextTheme(fontFamily: fontFamily),
     );
     return theme;
@@ -26,15 +33,23 @@ abstract final class AppTheme {
 
   /// Creates a dark [ThemeData] with the design system.
   static ThemeData dark({
-    DesignSystemPalette? palette,
+    AppColors? palette,
     TextTheme? textTheme,
     String fontFamily = 'IBMPlexSans',
   }) {
-    final p = palette ?? DesignSystemPalette.defaultDark();
+    final p = palette ?? AppColors.dark();
     final theme = ThemeData(
       brightness: Brightness.dark,
       scaffoldBackgroundColor: p.background,
-      extensions: [AppColors.fromPalette(p)],
+      colorScheme: ColorScheme.dark(
+        primary: p.primary,
+        onPrimary: p.foreground,
+        surface: p.card,
+        onSurface: p.foreground,
+        error: p.destructive,
+        onError: p.foreground,
+      ),
+      extensions: [p],
       textTheme: textTheme ?? buildTextTheme(fontFamily: fontFamily),
     );
     return theme;
