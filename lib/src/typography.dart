@@ -28,7 +28,7 @@ TextTheme buildTextTheme({
       fontVariations: const [FontVariation.weight(400)],
     ),
     bodyMedium: TextStyle(
-      fontSize: scale(12),
+      fontSize: scale(14),
       fontFamily: fontFamily,
       fontVariations: const [FontVariation.weight(400)],
     ),
