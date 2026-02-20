@@ -40,11 +40,11 @@ class _DesignBaseExampleAppState extends State<DesignBaseExampleApp> {
 
     return MaterialApp(
       title: 'Design Base Example',
-      theme: AppTheme.light(palette: customPalette, textTheme: textTheme),
-      darkTheme: AppTheme.dark(
-        palette: customDarkPalette,
-        textTheme: textTheme,
-      ),
+      theme: AppTheme.light(), //(palette: customPalette, textTheme: textTheme),
+      darkTheme: AppTheme.dark(), // (
+      // palette: customDarkPalette,
+      // textTheme: textTheme,
+      // ),
       themeMode: _themeMode,
       home: ExampleHomeScreen(
         themeMode: _themeMode,
